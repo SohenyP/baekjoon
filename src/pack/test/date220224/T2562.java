@@ -39,7 +39,5 @@ public class T2562 {
 		}
 		System.out.println(max);
 		System.out.println(idx);
-		
 	}
-
 }

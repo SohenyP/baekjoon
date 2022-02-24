@@ -16,12 +16,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class T2563_withIndexOf {
+public class T2562_withIndexOf {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int[] arr = new int[9];
+		//배열을 Integer 타입으로 생성
+		Integer[] arr = new Integer[9];
 		
 		for (int i = 0; i < 9; i++) {
 			arr[i] = Integer.parseInt(br.readLine());
@@ -33,11 +33,11 @@ public class T2563_withIndexOf {
 		for (int i : arr) {
 			if(i > max) {
 				max = i;
+				// index 넘버 가져오되, 인덱스는 0 부터 읽어주니까 +1!
+				idx = Arrays.asList(arr).indexOf(max) + 1;
 			}
 		}
 		System.out.println(max);
 		System.out.println(idx);
-		
 	}
-
 }
